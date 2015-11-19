@@ -1,4 +1,4 @@
-#Popcorn-Time Fix Windows & Mac
+#Popcorn-Time Fix (io version) Windows & Mac
 
 ###YTS Fix
 

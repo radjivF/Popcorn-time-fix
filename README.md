@@ -17,7 +17,7 @@ Browse to your Popcorn Time's /src/app/ folder
 Windows Default: C:\Users\USERNAME\AppData\Local\Popcorn Time\src\app
 Mac Default: Popcorn-Time.app/Contents/Resources/app.nw/src/app/
 
-Replace the setting.js by the setting.js found in this repository
+Replace the settings.js by the settings.js found in this repository
 
 
 ##Backup

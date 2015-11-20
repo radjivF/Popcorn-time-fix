@@ -45,7 +45,7 @@
                         if (torrent.quality !== '3D') {
                             torrents[torrent.quality] = {
                                 url: torrent.torrent_url,
-                                magnet: torrent.torrent_magnet, //'magnet:?xt=urn:btih:' + torrent.hash + '&tr=udp://open.demonii.com:1337&tr=udp://tracker.coppersurfer.tk:6969',
+                                magnet: torrent.torrent_magnet,
                                 size: torrent.size_bytes,
                                 filesize: torrent.size_bytes,
                                 seed: torrent.torrent_seeds,
@@ -110,7 +110,6 @@
         var defer = Q.defer();
         function get(index) {
             var options = {
-                //uri: Settings.ytsAPI[index].uri + 'list',
                 uri:"http://api.torrentsapi.com/list?",
                 qs: params,
                 json: true,
@@ -118,16 +117,7 @@
             };
             console.log('test', params);
 
-            /*var url = 'http://api.torrentsapi.com/list?';//sort=seeds&quality=720p&page=' + params.page + "&count=" + params.limit;
-            if(filters.keywords){ url+="&keywords="+filters.keywords; }
-            jQuery.getJSON(url, function(data) {
-                return defer.resolve(format(data.MovieList), params.page, params.limit);
-
-            }).fail(function( jqxhr, textStatus, error ) {
-                console.log('Error loading data...');
-                return defer.reject(textStatus);
-
-            });*/
+            
             var req = jQuery.extend(true, {}, Settings.ytsAPI[index], options);
             request(req, function (err, res, data) {
                 if (err || res.statusCode >= 400 || (data && !data.MovieList)) {
